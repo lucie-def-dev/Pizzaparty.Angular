@@ -1,7 +1,7 @@
 import { Component } from '@angular/core';
 import { Pizza } from './models/pizza.model';
-
-
+import { User } from  './models/user.model';
+import { Ingredient } from './models/ingredient.model';
 
 const PIZZAS : Pizza[] = [
   { id: 1, name: 'Reine', price: 12 },
@@ -16,14 +16,28 @@ const PIZZAS : Pizza[] = [
   styleUrls: ['./app.component.scss']
 })
 export class AppComponent {
-  title = 'Pizzaparty';
+  title = 'Pizza party';
   selectedPizza: Pizza;
   pizzas:Pizza[] = PIZZAS;
+  users:User[] = USERS;
+  ingredients: Ingredient[] =[
+    { name: 'Tomate', image: 'tomate.png', weight: 50 , price: 2},
+    { name: 'Olive', image: 'olive.jpg', weight: 5 , price: 2}
+
+  ];
 
   onSelect(pizza: Pizza): void {
     //on récupére la pizza cliquée
     console.log(pizza);
     this.selectedPizza = pizza;
   }
-  
+ 
 }
+
+const USERS : User[] = [
+  { name: 'Defossez'},
+  { name: 'Lucie'},
+  { name: '28 ans'},
+
+];
+
