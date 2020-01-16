@@ -5,6 +5,7 @@ import { AppComponent } from './app.component';
 import { PizzaComponent } from './pizza/pizza.component';
 import { UserComponent } from './user/user.component';
 import { IngredientListComponent } from './ingredient-list/ingredient-list.component';
+import { MenuComponent } from './menu/menu.component';
 // import { UserComponent } from './models/user.model';
 
 @NgModule({
@@ -12,7 +13,8 @@ import { IngredientListComponent } from './ingredient-list/ingredient-list.compo
     AppComponent,
     PizzaComponent,
     UserComponent,
-    IngredientListComponent
+    IngredientListComponent,
+    MenuComponent
     
   ],
   imports: [
