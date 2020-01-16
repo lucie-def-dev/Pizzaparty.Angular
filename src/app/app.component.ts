@@ -10,6 +10,11 @@ const PIZZAS : Pizza[] = [
   { id: 3, name: 'Orientale', price: 11 },
   { id: 4, name: 'Cannibale', price: 9 }
 ];
+const USERS : User[] = [
+  { name: 'Defossez'},
+  { name: 'Lucie'},
+  { name: '28 ans'},
+];
 
 @Component({
   selector: 'app-root',
@@ -22,25 +27,29 @@ export class AppComponent {
   pizzas:Pizza[] = PIZZAS;
   users:User[] = USERS;
   ingredients: Ingredient[] =[
-    { name: 'Tomate', image: 'tomate.png', weight: 50 , price: 2},
-    { name: 'Olive', image: 'olive.jpg', weight: 5 , price: 2}
+    { name: 'Tomate', image: 'tomate.png', weight: 50 , price: 2 , color: 'danger'},
+    { name: 'Olive', image: 'olive.jpg', weight: 5 , price: 2 , color: 'dark'}
   ];
-  selectedIngredient: Ingredient;
+  selectedIngredients: Ingredient[] = [];
 
   onSelect(pizza: Pizza): void {
     //on récupére la pizza cliquée
     console.log(pizza);
     this.selectedPizza = pizza;
   }
-  selectIngredient(event) {
+  selectIngredient(event: Ingredient) {
     console.log(event);
-    this.selectedIngredient = event;
+    if(!this.selectedIngredients.includes(event)){
+       this.selectedIngredients.push(event);
+    }
+   
+  }
+  deleteIngredient(index: number, event) {
+    event.stopPropagation();
+    //on supprime l'index du tableau
+    this.selectedIngredients.splice(index, 1);
   }
  
 }
-const USERS : User[] = [
-  { name: 'Defossez'},
-  { name: 'Lucie'},
-  { name: '28 ans'},
-];
+
 
