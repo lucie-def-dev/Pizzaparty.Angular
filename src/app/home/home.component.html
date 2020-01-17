@@ -1,0 +1,33 @@
+<h1> Accueil </h1>
+
+<h2>Les pizzas</h2>  
+<app-pizza [pizza]="selectedPizza" ></app-pizza>
+
+<div class="row">
+  <div *ngFor="let pizza of pizzas"
+      (click)="onSelect(pizza)"
+      [class.selected]="pizza === selectedPizza"
+      class="col-3">
+  <div class="card" [class.selected]="pizza === selectedPizza" >  
+    <div class="card-body">
+    <h5> {{ pizza.name }} </h5>
+    <a routerLink="/pizzas/{{pizza.id}}">Voir la pizza</a>
+    <span *ngFor="let selectedIngredient of selectedIngredients; index as i" class="badge badge-{{selectedIngredient.color}}"> 
+     {{ selectedIngredient.name }}
+     <span (click)="deleteIngredient(i, $event)">x</span>
+    </span>
+    </div>
+  </div> 
+ </div>
+</div>
+
+
+<app-user [user]="selectedUser"></app-user>
+<app-ingredient-list [ingredients]="ingredients"
+(select)="selectIngredient($event)"></app-ingredient-list>
+
+  
+
+<div *ngFor= "let user of users">
+  {{ user.name }}
+</div>
