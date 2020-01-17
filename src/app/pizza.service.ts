@@ -14,4 +14,10 @@
               response => response as Pizza []
             );
           }
+
+          getPizzas(id): Promise<Pizza> {
+            return this.http.get('http://localhost:3000/pizza/'+id).toPromise().then(
+              response => response as Pizza
+            );
+          }
         }
