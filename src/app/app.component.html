@@ -13,7 +13,7 @@
 
 
 <h2>Les pizzas</h2>  
-<app-pizza [pizza]="selectedPizza"></app-pizza>
+<app-pizza [pizza]="selectedPizza" ></app-pizza>
 
 <div class="row">
   <div *ngFor="let pizza of pizzas"
@@ -23,7 +23,7 @@
   >
   <div class="card" [class.selected]="pizza === selectedPizza" >  
     <div class="card-body">
-    <h5> {{ pizza.name }}</h5>
+    <h5> {{ pizza.name }} </h5>
     <span *ngFor="let selectedIngredient of selectedIngredients; index as i" class="badge badge-{{selectedIngredient.color}}"
 
     > 
@@ -39,4 +39,7 @@
 <app-user [user]="selectedUser"></app-user>
 <app-ingredient-list [ingredients]="ingredients"
 (select)="selectIngredient($event)"></app-ingredient-list>
+
+    <h2>Les pipes</h2>
+    <p>{{ 'hello' | test: '==' : '==' }}</p>
 </div>

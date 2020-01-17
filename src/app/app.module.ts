@@ -6,6 +6,8 @@ import { PizzaComponent } from './pizza/pizza.component';
 import { UserComponent } from './user/user.component';
 import { IngredientListComponent } from './ingredient-list/ingredient-list.component';
 import { MenuComponent } from './menu/menu.component';
+import { TestPipe } from './test.pipe';
+import { TvaPipe } from './tva.pipe';
 // import { UserComponent } from './models/user.model';
 
 @NgModule({
@@ -14,7 +16,10 @@ import { MenuComponent } from './menu/menu.component';
     PizzaComponent,
     UserComponent,
     IngredientListComponent,
-    MenuComponent
+    MenuComponent,
+    TestPipe,
+    TvaPipe,
+
     
   ],
   imports: [
