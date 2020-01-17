@@ -6,6 +6,7 @@ import { RouterModule } from '@angular/router';
 import { AppComponent } from './app.component';
 import { PizzaComponent } from './pizza/pizza.component';
 import { UserComponent } from './user/user.component';
+import { HttpClientModule } from '@angular/common/http';
 
 import { IngredientListComponent } from './ingredient-list/ingredient-list.component';
 import { MenuComponent } from './menu/menu.component';
@@ -39,7 +40,8 @@ import { PizzaSingleComponent } from './pizza-single/pizza-single.component';
       { path : 'pizzas', component: PizzaListComponent },
       { path : 'pizzas/:id', component: PizzaSingleComponent } // un objet représente une route
        // un objet représente une route
-    ])
+    ]),
+    HttpClientModule,
 
   ],
   providers: [],

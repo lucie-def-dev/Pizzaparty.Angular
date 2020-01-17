@@ -1,0 +1,13 @@
+{
+    "pizza": [
+    { "id": 1, "name": "Reine", "price": 12 },
+    { "id": 2, "name": "4 fromages", "price": 13 },
+    { "id": 3, "name": "Orientale", "price": 11 },
+    { "id": 4, "name": "Cannibale", "price": 9 },
+    { "id": 5, "name": "Volcano", "price": 12 },
+    { "id": 6, "name": "Volcano", "price": 12 },
+    { "id": 7, "name": "Volcano", "price": 12 },
+    { "id": 8, "name": "Volcano", "price": 12 }
+    
+  ]
+}

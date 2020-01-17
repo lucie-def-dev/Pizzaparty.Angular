@@ -1,1 +1,12 @@
-<p>pizza-list works!</p>
+<div class="row">
+    <div *ngFor="let pizza of pizzas"
+        class="col-3">
+
+            <div class="card" [class.selected]="pizza === selectedPizza" >  
+            <div class="card-body">
+             <h5> {{ pizza.name }} </h5>
+            <a routerLink="/pizzas/{{pizza.id}}">Voir la pizza</a>
+      </div>
+    </div> 
+   </div>
+  </div>
